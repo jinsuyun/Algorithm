@@ -37,8 +37,8 @@ public class baek_1759 {
 			}
 			System.out.println();
 		}
-		for(int i=start;i<c;i++) {
-			visit[i]=1;
+		for(int i=start;i<c;i++) {//start부터 시작해서 계속 깊이 우선 탐색으로 끝까지 방문할 경우 하나씩 백트래킹 하며 조건에 맞는 모든 경우의 수를 따져야한다. 
+			visit[i]=1;//c까지 방문을 하므로써 재귀함수를 통해 모든 경우의수를 구함
 			if(password[i]=='a'||password[i]=='e'||password[i]=='i'||password[i]=='o'||password[i]=='u') {
 				solve(i+1,depth+1,ja,mo+1);//모음이면 모음+1
 			}else {
