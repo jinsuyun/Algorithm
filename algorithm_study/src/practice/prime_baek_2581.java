@@ -31,7 +31,7 @@ public class prime_baek_2581 {
 			} 
 		}
 		
-		if (check) {//소수가 하나라도 있다면 모든 소수를 더한 값과 소수의 첫번째 값을 출력
+		if (check) {//소수가 하나라도 있다면 모든 소수를 더한 값과 소수의 첫번째 값을 출력 list.size()!=0이라고 써도 무방하다.
 			System.out.println(sum);
 			System.out.println(list.get(0));
 		} else {//소수가 하나도 없다면 -1을 출력한다.

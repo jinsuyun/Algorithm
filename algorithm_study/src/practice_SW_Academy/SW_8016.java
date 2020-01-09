@@ -17,7 +17,7 @@ public class SW_8016 {
 			long level=Long.parseLong(st.nextToken());//범위가 크기 때문에 long으로 선언
 			
 
-			long left=(long)(2*(level-1)*(level-1)+1);
+			long left=(long)(2*(level-1)*(level-1)+1);//다음과 같은 식으로 표현 가능... 어렵다;;
 			long right=(long)(2*level*level-1);
 			
 			System.out.println("#"+t+" "+left+" "+right);
