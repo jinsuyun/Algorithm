@@ -3,15 +3,24 @@ package java_basic;
 public class practice_innerclass {
 
 	public static void main(String[] args) {
-		// 내부 클래스
+		// 내부 클래스와 익명 클래스
+		
 	}
 
 }
 
 class Inner {
-	private int outerIv = 0;
-	static int outerCv = 0;
-
+	private int outerIv = 10;
+	static int outerCv = 20;
+	//익명 클래스는 오로지 단 하나의 클래스를 상속받거나 단 하나의 인터페이스만을 구현할 수 있다.
+	Object anoymous =new Object() {void method(){}};//익명 클래스
+	static Object staticObj = new Object() {//익명 클래스
+		void method() {
+			Object lv=new Object() {//익명 클래스
+				void method() {}
+			};
+		}
+	};
 	class InstanceInner {
 		int iiv = outerIv;// 외부 클래스의 private 멤버도 접근 가능하다.
 		int iiv2 = outerCv;
