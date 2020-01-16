@@ -16,26 +16,27 @@ public class practice_equals_stringclass {
 			System.out.println("값에 의한 참조가 아님");
 
 		if (v1 == v2)
-			System.out.println("값에 의한 참조");
+			System.out.println("주소 값에 의한 참조");
 		else
-			System.out.println("값에 의한 참조가 아님");
+			System.out.println("데이터 값에 의한 참조가 아님");
 
-		// equals는 주소 값을 비교
+		// equals는 데이터 값을 비교
 		if (v1.equals(v2))
-			System.out.println("참조변수 비교");
+			System.out.println("데이터 값 비교");
 		else
-			System.out.println("참조 변수 비교 아님");
+			System.out.println("주소 값 비교 아님");
 
 		v2 = v1;// 참조가 같다는 것을 명시, v2는 v1이 참조하고 있는 인스턴스 주소를 저장
 		if (v1.equals(v2))
-			System.out.println("참조변수 비교");
+			System.out.println("데이터 값 비교");
 		else
-			System.out.println("참조 변수 비교 아님");
-
+			System.out.println("주소 값 비교 아님");
+		//String 클래스는 String을 선언할때마다 새로운 인스턴스를 생성하는 개념
+		//단, 이미 존재하고 있는 같은 값의 리터럴 문자를 String 변수에 넣는 경우는 이미 존재하는 인스턴스를 사용
 		String s = new String("1");
 		String s2 = "1";
 		String s3 = new String("1");
-		if (s == s2)
+		if (s == s2)//==은 주소값을 비교하는 것
 			System.out.println("@");// ==으로 비교할 경우 다른 참조변수를 가리키는 것이므로 다르다고 나온다.
 		else
 			System.out.println("#");
@@ -46,7 +47,7 @@ public class practice_equals_stringclass {
 			System.out.println("4");
 
 		if (s == s3)
-			System.out.println("D");// 같은 String클래스를 사용한다고 해도 두개의 String은 다른 참조변수로 생성되기 때문에 ==으로 비교할 경우 다르다고 나온다.
+			System.out.println("D");// 같은 String클래스를 사용한다고 해도 두개의 String은 다른 인스턴스로 생성되기 때문에 ==(주소값 비교)으로 비교할 경우 다르다고 나온다.
 		else
 			System.out.println("E");
 
@@ -59,13 +60,10 @@ public class practice_equals_stringclass {
 		// 단, StringBuffer클래스는 오버라이딩 되어 있지 않다.
 
 		// String
-		// 문자열 간의 결합이나 추출 등 문자열을 다루는 작업이 많이 필요한 경우는 String대신 StringBuffer클래스를 사용하는 것이
-		// 좋다.
-		// StringBuffer인스턴스에 저장된 문자열은 변경이 가능하므로 하나의 StringBuffer인스턴스만으로 문자열을 다루는 것이
-		// 가능하다.
+		// 문자열 간의 결합이나 추출 등 문자열을 다루는 작업이 많이 필요한 경우는 String대신 StringBuffer클래스를 사용하는 것이 좋다.
+		// StringBuffer인스턴스에 저장된 문자열은 변경이 가능하므로 하나의 StringBuffer인스턴스만으로 문자열을 다루는 것이 가능하다.
 		String s4 = "abc";// 문자열 리터럴 abc의 주소가 s1에 저장됨
-		String s5 = new String("abc");// 새로운 String인스턴스를 생성, 따라서 String 클래스의 생성자를 이용한 경우에는 new 연산자에 의해 메모리 할당이 이루어지기
-										// 때문에
+		String s5 = new String("abc");// 새로운 String인스턴스를 생성, 따라서 String 클래스의 생성자를 이용한 경우에는 new연산자에 의해 메모리 할당이 이루어지기 때문에
 		// 항상 새로운 String 인스턴스가 생성된다. 그러나 문자열 리터럴은 이미 존재하는 것을 재사용하는 것이다.
 		
 		char[] carr=new char[0];//char[] carr={};와 같다.
