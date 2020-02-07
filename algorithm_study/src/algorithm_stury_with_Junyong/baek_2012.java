@@ -26,7 +26,7 @@ public class baek_2012 {
 			sum+=Math.abs(list.get(i)-(i+1));//불만의 최소 값을 구하기 위해 정렬한 리스트에서 한명씩 값을 빼주면 최소 값이 나온다.
 		}
 		System.out.println(sum);
-
+		
 	}
 
 }
